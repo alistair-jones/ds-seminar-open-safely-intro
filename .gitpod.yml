@@ -6,8 +6,8 @@ tasks:
     init: |
         # install everything into a venv in /workspace, so it is persisted in the prebuild image
         python -m venv /workspace/venv
-        # install opensafely
-        /workspace/venv/bin/pip install --progress-bar off opensafely
+        # install requirements
+        /workspace/venv/bin/pip install --progress-bar off -r requirements.txt
         # ensure essential docker images are preloaded preloaded
         /workspace/venv/bin/opensafely pull cohortextractor
     # run everytime we start a workspace
