@@ -4,16 +4,16 @@ expectations:
   population_size: 1000
 
 actions:
-
-  generate_study_population:
+  generate_cohort:
     run: cohortextractor:latest generate_cohort --study-definition study_definition
+    dummy_data_file: artificial_data/artificial_hes_apc_1415.csv
     outputs:
       highly_sensitive:
         cohort: output/input.csv
 
   describe:
     run: python:latest python analysis/report.py
-    needs: [generate_study_population]
+    needs: [generate_cohort]
     outputs:
       moderately_sensitive:
         cohort: output/descriptive.png
