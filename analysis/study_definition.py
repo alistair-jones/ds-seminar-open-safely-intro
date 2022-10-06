@@ -12,7 +12,7 @@ study = StudyDefinition(
     population=patients.all(),
 
     **get_dummy_data_fields(
-        "artificial_data/artificial_hes_apc_1415.csv",
-        "schemas/hes_apc_schema.csv"
+        "input/dummy_data/dummy_hes_apc_1415.csv",
+        "input/schemas/hes_apc_schema.csv"
     )
 )

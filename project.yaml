@@ -6,7 +6,7 @@ expectations:
 actions:
   generate_cohort:
     run: cohortextractor:latest generate_cohort --study-definition study_definition
-    dummy_data_file: artificial_data/artificial_hes_apc_1415.csv
+    dummy_data_file: input/dummy_data/dummy_hes_apc_1415.csv
     outputs:
       highly_sensitive:
         cohort: output/input.csv
